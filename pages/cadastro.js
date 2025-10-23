@@ -1,7 +1,7 @@
 
 const button = document.querySelector("button")
 
-button.click = (event) =>{
+button.onclick = (event) =>{
     event.preventDefault()
     sendUser()
 }
@@ -18,9 +18,9 @@ button.click = (event) =>{
         password
     }
 
-    console.log(user)
+   
 
-    const response = fetch("http://localhost:3333/cadastrar", {
+    const response = await fetch("http://localhost:3333/cadastrar", {
         method: "POST",
         headers: {  
         "Content-Type": "application/json"
