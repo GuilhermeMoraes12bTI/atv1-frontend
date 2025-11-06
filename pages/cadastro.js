@@ -28,4 +28,6 @@ button.onclick = (event) =>{
         body: JSON.stringify({ user })
     }).then(response => response.json())
     alert(response.message)
+
+    window.location.href = "../index.html"
 }
