@@ -1,7 +1,7 @@
-const pessoaDiv = document.querySelector(".pessoa")
+const main = document.querySelector("main")
 const button = document.querySelector("button")
 
-button.addEventListener("click",receberMensagemDoBackend)
+
 
 async function receberMensagemDoBackend(){
     const response = await fetch("http://localhost:3333").then(response => response.json())  
@@ -9,18 +9,18 @@ async function receberMensagemDoBackend(){
 
    response.map((person) => {
 
-     pessoaDiv.innerHTML += `
-     <div>
+     main.innerHTML += `
+     <section>
     <h2>Nome: ${person.name}</h2>
-    <h3>Idade: ${person.age}</h2>
-    <h3>CPF: ${person.cpf}</h2>
-    <hr>
-    </div>
+    <p>E-mail: ${person.email}</p>
+ 
+    </section>
+
     `
 
    })
 
 
-
-    console.log(response)
 }
+
+receberMensagemDoBackend()
