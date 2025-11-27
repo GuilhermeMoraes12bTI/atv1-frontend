@@ -1,0 +1,26 @@
+function init(){
+    const navUl = document.querySelector("nav ul")
+
+    const user = JSON.parse(sessionStorage.getItem("user"))
+
+
+    if (user){
+        navUl.innerHTML += `
+        <h2>Usuário: ${user.name}</h2>
+        <button>Sair</button>
+        `
+
+        return
+    }
+
+
+    navUl.innerHTML += `
+    
+    <li>
+        <a href="./pages/login.html">Login</a>
+    </li>
+    `
+}
+
+
+init()
