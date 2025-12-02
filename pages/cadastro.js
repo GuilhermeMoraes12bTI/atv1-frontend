@@ -20,7 +20,7 @@ button.onclick = (event) =>{
 
    
 
-    const response = await fetch("http://localhost:3333/cadastrar", {
+    const response = await fetch("https://atv1-backend.vercel.app/cadastrar", {
         method: "POST",
         headers: {  
         "Content-Type": "application/json"
